@@ -1,0 +1,31 @@
+# LangChain and AI Core
+langchain
+langchain-openai
+langchain-community
+langchain-huggingface
+pydantic
+
+# Vector Store and Embeddings
+faiss-cpu
+sentence-transformers
+
+# Data and Database
+pandas
+numpy
+SQLAlchemy
+
+# API and Server
+fastapi
+uvicorn[standard]
+
+# Utilities
+python-dotenv
+python-dateutil
+
+# Frontend
+streamlit
+plotly
+
+# Testing
+pytest
+pytest-asyncio

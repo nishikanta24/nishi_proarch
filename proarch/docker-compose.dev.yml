@@ -1,0 +1,37 @@
+version: '3.8'
+
+# Development override for docker-compose.yml
+# Use with: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=DEBUG
+    command: ["python", "-m", "uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--reload-dir", "/app/src"]
+
+  frontend:
+    volumes:
+      - ./frontend.py:/app/frontend.py
+      - ./src:/app/src
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=false
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+
+  # Development database (optional)
+  # db:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     POSTGRES_DB: cost_analytics_dev
+  #     POSTGRES_USER: proarch
+  #     POSTGRES_PASSWORD: dev_password
+  #   ports:
+  #     - "5433:5432"  # Different port to avoid conflicts
+  #   volumes:
+  #     - postgres_dev_data:/var/lib/postgresql/data

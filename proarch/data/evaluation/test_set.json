@@ -1,0 +1,271 @@
+{
+    "test_cases": [
+        {
+            "id": "cost_total_may",
+            "question": "What was total spend in May 2024?",
+            "expected_answer_type": "numeric",
+            "ground_truth_sources": [
+                "billing_data"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 4,
+                "actionability": 3
+            },
+            "notes": "Should extract exact total cost from data"
+        },
+        {
+            "id": "cost_increase_april_may",
+            "question": "Why did spend increase vs April?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "billing_data",
+                "trend_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 5
+            },
+            "notes": "Should identify main cost drivers and provide breakdown"
+        },
+        {
+            "id": "top_services_cost",
+            "question": "What are the top 3 services by cost?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "billing_data",
+                "service_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should list top services with their costs"
+        },
+        {
+            "id": "idle_resources",
+            "question": "Which resources look idle and how much could we save?",
+            "expected_answer_type": "recommendation",
+            "ground_truth_sources": [
+                "usage_analysis",
+                "billing_data"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 4,
+                "actionability": 5
+            },
+            "notes": "Should identify idle resources and estimate savings"
+        },
+        {
+            "id": "untagged_resources",
+            "question": "List resources with missing owner tag",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "resource_metadata",
+                "tagging_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 5
+            },
+            "notes": "Should identify resources without proper tagging"
+        },
+        {
+            "id": "regional_cost_breakdown",
+            "question": "Show cost breakdown by region for last month",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "billing_data",
+                "regional_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 3
+            },
+            "notes": "Should provide regional cost distribution"
+        },
+        {
+            "id": "monthly_trend",
+            "question": "What has been the cost trend over the last 6 months?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "billing_data",
+                "trend_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should show month-over-month trends"
+        },
+        {
+            "id": "cost_anomalies",
+            "question": "Are there any unusual cost patterns or anomalies?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "anomaly_detection",
+                "billing_data"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 4,
+                "actionability": 5
+            },
+            "notes": "Should identify potential cost anomalies"
+        },
+        {
+            "id": "resource_group_cost",
+            "question": "Which resource groups have the highest costs?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "billing_data",
+                "resource_group_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should rank resource groups by cost"
+        },
+        {
+            "id": "optimization_opportunities",
+            "question": "What are the biggest opportunities for cost optimization?",
+            "expected_answer_type": "recommendation",
+            "ground_truth_sources": [
+                "optimization_analysis",
+                "recommendations"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 4,
+                "actionability": 5
+            },
+            "notes": "Should identify key optimization opportunities"
+        },
+        {
+            "id": "unit_cost_changes",
+            "question": "Have there been any significant unit cost changes?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "unit_cost_analysis",
+                "billing_data"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should detect unit cost spikes or changes"
+        },
+        {
+            "id": "service_utilization",
+            "question": "Which services have the highest utilization vs cost?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "usage_analysis",
+                "cost_efficiency"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should analyze cost efficiency of services"
+        },
+        {
+            "id": "tagging_compliance",
+            "question": "What is our current resource tagging compliance rate?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "tagging_analysis",
+                "resource_metadata"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 5
+            },
+            "notes": "Should calculate and report tagging compliance"
+        },
+        {
+            "id": "budget_vs_actual",
+            "question": "How do our costs compare to budget for this quarter?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "budget_analysis",
+                "billing_data"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 5,
+                "completeness": 5,
+                "clarity": 5,
+                "actionability": 5
+            },
+            "notes": "Should compare actual vs budget costs"
+        },
+        {
+            "id": "forecasting",
+            "question": "Based on current trends, what will our costs be next month?",
+            "expected_answer_type": "analytical",
+            "ground_truth_sources": [
+                "forecasting",
+                "trend_analysis"
+            ],
+            "evaluation_criteria": {
+                "accuracy": 4,
+                "completeness": 4,
+                "clarity": 5,
+                "actionability": 4
+            },
+            "notes": "Should provide cost forecasting based on trends"
+        }
+    ],
+    "evaluation_rubric": {
+        "accuracy": {
+            "description": "How factually correct and grounded in the provided data is the answer?",
+            "scale": "1-5 (1=Completely inaccurate, 5=Fully accurate with no hallucinations)"
+        },
+        "completeness": {
+            "description": "Does the answer address all aspects of the question comprehensively?",
+            "scale": "1-5 (1=Missing key information, 5=Complete and thorough)"
+        },
+        "clarity": {
+            "description": "Is the answer clearly written and easy to understand?",
+            "scale": "1-5 (1=Confusing or unclear, 5=Crystal clear and well-structured)"
+        },
+        "actionability": {
+            "description": "Does the answer provide actionable insights or next steps?",
+            "scale": "1-5 (1=No actionable insights, 5=Specific, implementable recommendations)"
+        }
+    },
+    "retrieval_metrics": {
+        "recall_at_k": {
+            "description": "Recall@k measures what fraction of relevant documents were retrieved",
+            "k_values": [
+                1,
+                3,
+                5
+            ]
+        }
+    }
+}
